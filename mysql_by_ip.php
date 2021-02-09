@@ -1,14 +1,10 @@
 <?php
-             $mysqli = new mysqli('34.68.11.173', 'mario_user', 'marioramirez080221', 'prueba');
+             
+             $mysqli_externa = new mysqli('34.70.88.13', 'usr_mario', 'marioramirez090121', 'prueba_mario', 3306);
              if ($mysqli->connect_errno) {
-                echo 'Fallo al conectar a MySQL: (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error;
-              }
-             echo $mysqli->host_info . '\n';
+                echo 'Fallo al conectar a MySQL con ip externa: (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error;
+              }                           
+             echo $mysqli_externa->host_info . '\n';
 
-             $mysqli = new mysqli('127.0.0.1', 'usr_mario', 'marioramirez090121', 'prueba_mario', 3306);
-             if ($mysqli->connect_errno) {
-                echo 'Fallo al conectar a MySQL: (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error;
-              }
 
-              echo $mysqli->host_info . '\n';
             ?>
